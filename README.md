@@ -3,7 +3,7 @@
 ## Description
 This project serves as a comprehensive guide and record of the steps and challenges faced while creating a blog website. It details the installation of necessary packages, setting up environment variables, and configuring Appwrite for database operations. The project also involves frontend development with a component-based UI and state management using Redux-Toolkit. Below is a detailed walkthrough to help you set up and understand the project.
 
-## You can check preview here - 
+## You can check preview here - https://fable-flare.vercel.app/
 
 ## Prerequisites
 To get started, ensure you have the following installed on your machine:
@@ -38,6 +38,13 @@ Set up authentication services on Appwrite to manage user logins, signups, and o
 ### 5. Frontend Structure
 The frontend is structured using separate components for each UI element, ensuring a modular and maintainable codebase.
 
+### 6. TinyMCE Integration
+For rich text editing, TinyMCE has been integrated into the project. Ensure you have a TinyMCE API key and include it in your environment variables.
+
+```env
+VITE_TINY_MCE_API_KEY=your-tinymce-api-key
+```
+
 ## Problems Faced
 Throughout the project, several challenges were encountered:
 
@@ -45,20 +52,20 @@ Throughout the project, several challenges were encountered:
 - **Learning Appwrite**: Initially, understanding the Appwrite database was difficult due to unfamiliarity with the service.
 - **User Authentication and CRUD Operations**: Implementing user login, signup, and CRUD operations for blogs was a new and educational experience.
 - **Backend Development**: Developing the backend services provided valuable insights and learning opportunities.
-
+- **TinyMCE Integration**: Incorporating TinyMCE for rich text editing required understanding its API and configuration.
 
 ## Learnings
 This project was a significant learning experience, offering practical knowledge applicable to real-world projects. Key takeaways include:
 
 - **Production-Level Code**: Writing and maintaining production-level code.
 - **State Management**: Implementing state management using Redux-Toolkit, as taught by Hitesh Choudhary in his "Chai Aur React" series.
+- - **Component-Based UI**: Developing a React application with a modular and reusable component-based UI.
+- **Rich Text Editing**: Integrating TinyMCE for a rich text editing experience.
 
 ## Conclusion
 Working on this project has been highly rewarding, providing hands-on experience with both frontend and backend development, and enhancing overall understanding of full-stack development.
 
 Feel free to clone the repository and explore the code. Contributions and feedback are welcome!
-
-
 
 # React + Vite
 
