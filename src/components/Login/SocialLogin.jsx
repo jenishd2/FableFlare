@@ -1,9 +1,8 @@
 import React from 'react'
-import {Container,Button } from '../index'
+import {Button } from '../index'
 import authServices from '../../appwrite/auth'
-import { useNavigate } from 'react-router-dom'
 export default function SocialLogin() {
-    const navigate = useNavigate()
+
     const googlelogin = (e)=>{
         e.preventDefault();
         authServices.GoogleLogin()
