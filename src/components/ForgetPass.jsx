@@ -9,7 +9,7 @@ export default function ForgetPass() {
   const [success,setSuccess] = useState("")
   const [error,seterror] = useState("")
   const getemail = async (data) => {
-    const url = "https://fable-flare.vercel.app/reset-password";
+    const url = "https://fable-flare.vercel.app/reset-password"
     setSuccess("")
     try {
       const user = await authServices.forgetpass(data.email, url);
