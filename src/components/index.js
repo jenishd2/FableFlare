@@ -13,6 +13,8 @@ import Loader from "./Loader"
 import Select from "./Select"
 import Container from "./Container"
 import Hero from "./Hero"
+import ForgetPass from "./ForgetPass"
+import ResetPass from "./ResetPass"
 export{
     Footer,
     Header,
@@ -28,5 +30,7 @@ export{
     Loader,
     Select,
     Container,
-    Hero
+    Hero,
+    ForgetPass,
+    ResetPass
 }

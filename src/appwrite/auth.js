@@ -64,6 +64,23 @@ export class AuthServices {
             console.log("Google auth error in auth.js folder of appwrite", error);
           }
     }
+    async forgetpass(email,url){
+        try {
+            const response = await this.account.createRecovery(email, url);
+            return response;
+            
+        } catch (error) {
+            console.log("Error",error)
+        }
+    }
+    async updatepass(userId,secret,newpass,conpass){
+        try {
+            const response = await this.account.updateRecovery(userId,secret,newpass,conpass)
+            return response
+        } catch (error) {
+            console.log("error" , error)
+        }
+    }
 }
 
 const authServices = new AuthServices();

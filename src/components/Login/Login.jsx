@@ -67,6 +67,9 @@ export default function Login({}) {
           })}
         />
         {error && <p className="text-md text-red-500">Error: {error}</p>}
+        <div className="w-full h-full">
+        <Link to="/forgetpassword"><p className="text-left text-gray-600">Forgot Password?</p></Link>
+        </div>
         <Button
           classname="border-2 border-black text-xl font-semibold px-2 py-1 rounded focus:shadow-[inset_0px_0px_5px_black]"
           children="Login"

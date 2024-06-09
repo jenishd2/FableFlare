@@ -12,8 +12,8 @@ export default function Post() {
 
   const userdata = useSelector((state) => state.auth.userData);
 
-  const isAuthor = post && userdata ? post.userid === userdata.$id : false;
-
+  const isAuthor = post && userdata ? post.userid === userdata.userId : false;
+  
   useEffect(() => {
     if (slug) {
       service.getPost(slug).then((post) => {
@@ -35,7 +35,7 @@ export default function Post() {
 
   return post ? (
     <Container classname="mx-auto !w-[80%] overflow-y-scroll no-scrollbar ">
-      <div className="w-full flex justify-center items-center flex-col  mb-4 relative border rounded-xl p-2">
+      <div className="w-full flex justify-center h-fit items-center flex-col mb-4 relative border rounded-xl p-2">
         <img
           src={service.getFilePreview(post.featuredImg)}
           alt={post.title}
@@ -43,7 +43,7 @@ export default function Post() {
         />
 
         {isAuthor && (
-          <div className="absolute right-6 top-6">
+          <div className="absolute right-6 top-6 ">
             <Link to={`/edit-post/${post.$id}`}>
               <Button classname="mr-3 border-2 border-black  text-xl font-semibold px-2 py-1 rounded hover:shadow-3xl transition hover:ease-in-out duration-300">
                 Edit
