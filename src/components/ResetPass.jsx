@@ -48,7 +48,7 @@ export default function ResetPass() {
           {error && <p className="text-md text-red-500"> {error}</p>}
           {success && <p className="text-md text-green-500"> {success}</p>}
       <Button  classname="border-2 border-black text-xl font-semibold px-2 py-1 rounded focus:shadow-[inset_0px_0px_5px_black]"
-        children="Send"/>
+        children="Change Password"/>
     </form>
   </div>
   )
