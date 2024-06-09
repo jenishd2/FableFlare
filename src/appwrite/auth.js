@@ -1,5 +1,5 @@
 import conf from "../conf/conf.js";
-import { Client, Account, ID } from "appwrite";
+import { Client, Account, ID,OAuthProvider } from "appwrite";
 
 // AuthServices class to manage authentication
 export class AuthServices {
@@ -39,7 +39,7 @@ export class AuthServices {
 
     async getAccount() {
         try {
-            return await this.account.get();
+            return await this.account.getSession('current');
         } catch (error) {
             throw new Error(`Failed to get account details: ${error.message}`);
         }
@@ -55,7 +55,14 @@ export class AuthServices {
     }
 
     async GoogleLogin(){
-        
+        try {
+            const success = "http://localhost:5173/"
+    
+            const failed = "http://localhost:5173/login"
+            this.account.createOAuth2Session(OAuthProvider.Google,success,failed);
+          } catch (error) {
+            console.log("Google auth error in auth.js folder of appwrite", error);
+          }
     }
 }
 

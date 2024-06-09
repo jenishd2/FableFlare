@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import authServices from "../../appwrite/auth";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import SocialLogin from "./SocialLogin";
 
 export default function Login({}) {
   const navigate = useNavigate();
@@ -70,6 +71,8 @@ export default function Login({}) {
           classname="border-2 border-black text-xl font-semibold px-2 py-1 rounded focus:shadow-[inset_0px_0px_5px_black]"
           children="Login"
         />
+      <h1>OR</h1>
+      <SocialLogin />
       </form>
     </div>
   );
