@@ -30,7 +30,7 @@ function App() {
       <Loader/>
     </div>
   ): (
-    <div className='bg-gray-200'>
+    <div className='bg-gray-100'>
       <Header />
       <Outlet />
       <Footer />

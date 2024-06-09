@@ -25,11 +25,12 @@ export default function Login({}) {
             navigate("/");
         }
     } catch (error) {
-        seterror(error.message);
+      if(error.message == "Failed to login: Invalid credentials. Please check the email and password.") seterror("Please Signup!")
+      else seterror(error.message);
     }
 };
   return (
-    <div className="w-[30%] border-2 border-gray-400 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit">
+    <div className="w-[30%] border-2 border-gray-900 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit">
       <h1 className="text-3xl">Login</h1>
       <p className="text-base text-black/60">
         Don&apos;t have any account?&nbsp;

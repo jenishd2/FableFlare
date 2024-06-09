@@ -29,7 +29,7 @@ export default function Signup({}) {
     }
   };
   return (
-    <div className="w-[30%]  border-2 border-gray-400 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit ">
+    <div className="w-[30%]  border-2 border-gray-900 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit ">
       <h1 className="text-3xl">Signup</h1>
       <p className="text-base text-black/60">
         You have any account?&nbsp;
