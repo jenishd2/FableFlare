@@ -22,7 +22,7 @@ export default function ResetPass() {
       }
     }
   return (
-    <div className="w-[30%] border-2 border-gray-900 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit">
+    <div className="w-[30%] max-ml:w-[90%] max-ml:p-2 border-2 border-gray-900 p-4 mx-auto m-3 flex flex-col justify-evenly gap-5 items-center rounded-md h-fit">
     <h1 className="text-3xl">Reset Password ?</h1>
     <form
       onSubmit={handleSubmit(getpass)}
