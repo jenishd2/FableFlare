@@ -19,7 +19,7 @@ export default function EditPost() {
     }
   }, [navigate, slug]);
   return post ? (
-    <Container classname="!w-[90%] mx-auto">
+    <Container classname="!w-[90%] mx-auto max-ml:h-fit">
       <PostForm post={post} />
     </Container>
   ) : null;

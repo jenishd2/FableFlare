@@ -10,7 +10,7 @@ const Input = forwardRef(function Input(
   return (
     <div className="w-full flex flex-col justify-center items-start">
       {label && (
-        <label className="text-xl mb-3 text-gray-600 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor={id}>
+        <label className="text-xl max-ml:text-lg mb-3 text-gray-600 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor={id}>
           {label}
         </label>
       )}

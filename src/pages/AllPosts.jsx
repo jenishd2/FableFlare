@@ -14,10 +14,10 @@ export default function AllPosts() {
     
 
     if(posts.length === 0) return <Container classname="flex justify-center items-center"><h1 className='text-8xl'>You have Not Post Anything.</h1></Container>
-    else return ( <Container classname="flex flex-wrap !w-[90%] mx-auto overflow-y-scroll no-scrollbar" >
+    else return ( <Container classname="flex flex-wrap !w-[90%] mx-auto overflow-y-scroll no-scrollbar max-ml:h-fit" >
       {/* <div className="flex flex-wrap !w-[90%] mx-auto h-full overflow-y-scroll"> */}
           {posts.map((post) => (
-            <div key={post.$id} className="p-2 w-1/4 h-fit">
+            <div key={post.$id} className="p-2 w-1/4 max-ml:w-full h-fit">
               <Card {...post}/>
             </div>
           ))}

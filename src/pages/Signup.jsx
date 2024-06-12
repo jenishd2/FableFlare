@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container, Signup as SignupComponent } from '../components'
+import { Container, Signup as SignupComponent } from '../components/index'
 export default function Signup() {
   return (
-    <Container className='w-full flex justify-center items-center h-[679px]'>
+    <Container classname='flex justify-center items-center '>
       <SignupComponent />
     </Container>
   )

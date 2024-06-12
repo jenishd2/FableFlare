@@ -12,8 +12,8 @@ export default function Post() {
 
   const userdata = useSelector((state) => state.auth.userData);
 
-  const isAuthor = post && userdata ? post.userid === userdata.userId : false;
-  
+  const isAuthor = post && userdata ? post.userid === userdata.$id : false;
+
   useEffect(() => {
     if (slug) {
       service.getPost(slug).then((post) => {
@@ -34,16 +34,16 @@ export default function Post() {
   };
 
   return post ? (
-    <Container classname="mx-auto !w-[80%] overflow-y-scroll no-scrollbar ">
-      <div className="w-full flex justify-center h-fit items-center flex-col mb-4 relative border rounded-xl p-2">
+    <Container classname="mx-auto !w-[80%] max-ml:!w-full overflow-y-scroll no-scrollbar ">
+      <div className="w-full max-ml:h-[350px] flex justify-center h-fit items-center flex-col mb-4 relative border rounded-xl p-2">
         <img
           src={service.getFilePreview(post.featuredImg)}
           alt={post.title}
-          className="rounded-xl h-[90%] w-[35%]"
+          className="rounded-xl h-[90%] w-[35%] max-ml:w-[90%]"
         />
 
         {isAuthor && (
-          <div className="absolute right-6 top-6 ">
+          <div className="absolute ml:right-6 ml:top-6 -bottom-[3rem] ">
             <Link to={`/edit-post/${post.$id}`}>
               <Button classname="mr-3 border-2 border-black  text-xl font-semibold px-2 py-1 rounded hover:shadow-3xl transition hover:ease-in-out duration-300">
                 Edit
@@ -58,11 +58,11 @@ export default function Post() {
           </div>
         )}
       </div>
-      <div className="w-full mb-6 flex gap-3 ">
-        <h1 className="text-2xl font-bold text-left">Title:</h1>
-        <h1 className="text-2xl  text-left">{post.title}</h1>
+      <div className="w-full mb-6 max-ml:mt-[4rem] flex gap-3 ">
+        <h1 className="text-2xl font-bold text-left max-ml:text-xl">Title:</h1>
+        <h1 className="text-2xl  text-left max-ml:text-xl">{post.title}</h1>
       </div>
-      <h1 className="font-bold text-2xl my-3">Description</h1>
+      <h1 className="font-bold text-2xl my-3 max-ml:text-xl">Description</h1>
       <div className="browser-css text-left text-xl">
         {parse(post.content)}
       </div>

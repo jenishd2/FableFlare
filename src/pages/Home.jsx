@@ -16,7 +16,7 @@ export default function Home() {
   if (Posts.length === 0 && authStatus ) {
     return (
       <Container classname="flex justify-around items-center">
-        <h1 className="text-4xl">You Didn't Post AnyThing</h1>
+        <h1 className="text-4xl max-ml:text-center">You Didn't Post AnyThing</h1>
       </Container>
     );
   } 
@@ -24,9 +24,9 @@ export default function Home() {
   if(authStatus) {
     return (
       <Container>
-        <div className="flex flex-wrap w-[90%] mx-auto h-full">
+        <div className="flex flex-wrap w-[90%] mx-auto h-full overflow-y-scroll no-scrollbar ">
           {Posts.map((post) => (
-            <div key={post.$id} className="p-2 w-1/4">
+            <div key={post.$id} className="p-2 w-1/4 max-ml:w-full">
               <Card {...post} />
             </div>
           ))}
@@ -37,7 +37,7 @@ export default function Home() {
   }
   else{
     return (
-      <Container classname="flex justify-around items-center">
+      <Container classname="flex justify-around items-center max-ml:flex-col ">
         <Hero />
       </Container>
     );
