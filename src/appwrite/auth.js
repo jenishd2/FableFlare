@@ -56,9 +56,9 @@ export class AuthServices {
 
     async GoogleLogin(){
         try {
-            const success = "http://localhost:5173/"
+            const success = "https://fable-flare.vercel.app/"
     
-            const failed = "http://localhost:5173/login"
+            const failed = "https://fable-flare.vercel.app/login"
             this.account.createOAuth2Session(OAuthProvider.Google,success,failed);
           } catch (error) {
             console.log("Google auth error in auth.js folder of appwrite", error);

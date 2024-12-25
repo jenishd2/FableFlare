@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import authServices from "../../appwrite/auth";
 import { useSelector } from "react-redux";
 import { Logout, Button } from "../index";
